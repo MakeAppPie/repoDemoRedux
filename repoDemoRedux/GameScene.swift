@@ -18,6 +18,7 @@ class GameScene: SKScene {
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
+        //Change Hello world in Helvetica narrow to hello pizza in Georgia.
         self.label?.text = "Hello 🍕"
         self.label?.fontName = "Georgia"
         if let label = self.label {
@@ -25,7 +26,7 @@ class GameScene: SKScene {
             label.run(SKAction.fadeIn(withDuration: 2.0))
         }
         
-        // Create shape node to use during mouse interaction
+        // Create shape node to use during mouse interaction of a ellipse
         let w = (self.size.width + self.size.height) * 0.05
         let h = w * 2.0
         self.spinnyNode = SKShapeNode.init(ellipseOf: CGSize.init(width: w, height: h))
